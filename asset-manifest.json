@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/DeliveryWeb/static/css/main.e6ee38f9.css",
-    "main.js": "/DeliveryWeb/static/js/main.a77f3af0.js",
-    "static/js/787.b13062bd.chunk.js": "/DeliveryWeb/static/js/787.b13062bd.chunk.js",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/DeliveryWeb/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/fontawesome-webfont.eot": "/DeliveryWeb/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/DeliveryWeb/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/DeliveryWeb/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/DeliveryWeb/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "index.html": "/DeliveryWeb/index.html",
-    "main.e6ee38f9.css.map": "/DeliveryWeb/static/css/main.e6ee38f9.css.map",
-    "main.a77f3af0.js.map": "/DeliveryWeb/static/js/main.a77f3af0.js.map",
-    "787.b13062bd.chunk.js.map": "/DeliveryWeb/static/js/787.b13062bd.chunk.js.map"
+    "main.css": "/DeliveryWeb/delivery_client/static/css/main.6f096dc2.css",
+    "main.js": "/DeliveryWeb/delivery_client/static/js/main.e8ec8f43.js",
+    "static/js/787.b13062bd.chunk.js": "/DeliveryWeb/delivery_client/static/js/787.b13062bd.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/DeliveryWeb/delivery_client/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/DeliveryWeb/delivery_client/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/DeliveryWeb/delivery_client/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/DeliveryWeb/delivery_client/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/DeliveryWeb/delivery_client/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "index.html": "/DeliveryWeb/delivery_client/index.html",
+    "main.6f096dc2.css.map": "/DeliveryWeb/delivery_client/static/css/main.6f096dc2.css.map",
+    "main.e8ec8f43.js.map": "/DeliveryWeb/delivery_client/static/js/main.e8ec8f43.js.map",
+    "787.b13062bd.chunk.js.map": "/DeliveryWeb/delivery_client/static/js/787.b13062bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6ee38f9.css",
-    "static/js/main.a77f3af0.js"
+    "static/css/main.6f096dc2.css",
+    "static/js/main.e8ec8f43.js"
   ]
 }
