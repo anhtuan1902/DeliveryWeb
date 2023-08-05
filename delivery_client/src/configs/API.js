@@ -41,7 +41,7 @@ export const endpoints = {
 // })
 
 export const authAPI = () => axios.create({
-    baseURL: "http://deliverydjango.pythonanywhere.com/",
+    baseURL: "http://deliverydjango.pythonanywhere.com",
     headers: {
         "Authorization": `Bearer ${cookies.load("access-token")}`
     }
