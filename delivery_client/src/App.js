@@ -19,7 +19,7 @@ function App() {
     <UserContext.Provider value={[user, dispatch]}>
       <BrowserRouter>
         <Routes >
-          <Route path='/' element={<Login />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/' element={<Home />} />
           <Route path='/register' element={<Register />} />
           <Route path='/admin/discounts' element={<Discount />} />
