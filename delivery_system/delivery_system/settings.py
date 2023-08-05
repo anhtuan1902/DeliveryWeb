@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -97,6 +96,11 @@ WSGI_APPLICATION = 'delivery_system.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+import pymysql
+
+pymysql.install_as_MySQLdb()
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -106,11 +110,6 @@ DATABASES = {
         'HOST': ''  # mặc định localhost
     }
 }
-
-import pymysql
-
-pymysql.version_info = (1, 4, 3, 'final', 0)
-pymysql.install_as_MySQLdb()
 
 AUTH_USER_MODEL = 'delivery.User'
 
