@@ -75,12 +75,12 @@ function Shippers() {
 
     const ShowHome = () => {
         return (
-            <div className='row' >
-                {toggle && <div className='col-4 col-md-2 vh-100 position-fixed bg-white'>
+            <div className='row vh-100' >
+                {toggle && <div className='col-4 col-md-2  position-fixed bg-white'>
                     <Sidebar />
                 </div>}
                 {toggle && <div className='col-4 col-md-2'></div>}
-                <div className='col vh-100' style={{backgroundColor: "#E0EAFC"}}>
+                <div className='col' style={{backgroundColor: "#E0EAFC"}}>
                     <div className='px-3'>
                         <Header Toggle={Toggle} />
                         <div className="d-flex align-items-center flex-column">

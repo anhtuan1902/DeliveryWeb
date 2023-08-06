@@ -200,12 +200,12 @@ function ShipperDetail() {
         <div className='container-fluid bg-light min-vh-100' style={{backgroundColor: "#E0EAFC"}}>
             {loading ? <Loading /> :
                 <>
-                    <div className='row'>
-                        {toggle && <div className='col-4 col-md-2 vh-100 position-fixed bg-white'>
+                    <div className='row vh-100'>
+                        {toggle && <div className='col-4 col-md-2 position-fixed bg-white'>
                             <Sidebar />
                         </div>}
                         {toggle && <div className='col-4 col-md-2'></div>}
-                        <div className='col vh-100' style={{backgroundColor: "#E0EAFC", paddingLeft: 0, paddingRight: 0}}>
+                        <div className='col ' style={{backgroundColor: "#E0EAFC", paddingLeft: 0, paddingRight: 0}}>
                             <div className='px-3' style={{backgroundColor: "#E0EAFC"}}>
                                 <Header Toggle={Toggle} />
                                 <div className="d-flex align-items-center flex-column">

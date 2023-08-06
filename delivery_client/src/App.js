@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -27,7 +27,8 @@ function App() {
           <Route path='/admin/shippers' element={<ShipperAdmin />} />
           <Route path='/shippers/:shipperId' element={<ShipperDetail />} />
           <Route path='/orders' element={<Orders />} />
-          <Route path='*' element={<div className='alert alert-info m-1'>Comming soon...</div>} />
+          <Route path='*' element={<div className='alert alert-info m-1'>Comming soon...<Link to="/"
+                                    className="link-danger">Come back</Link></div>} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>

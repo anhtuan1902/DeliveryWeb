@@ -102,7 +102,6 @@ function Orders() {
           alert(ex)
         } finally {
           setLoading(false)
-
         }
       }
     }
@@ -116,17 +115,17 @@ function Orders() {
 
   const ShowShipper = () => {
     return (<>
-      <div className='row'>
-        {toggle && <div className='col-4 col-md-2 vh-100 position-fixed bg-white'>
+      <div className='row vh-100'>
+        {toggle && <div className='col-4 col-md-2 position-fixed bg-white'>
           <Sidebar />
         </div>}
         {toggle && <div className='col-4 col-md-2'></div>}
-        <div className='col vh-100' style={{ backgroundColor: "#E0EAFC" }}>
+        <div className='col' style={{ backgroundColor: "#E0EAFC" }}>
           <div className='px-3'>
             <Header Toggle={Toggle} />
             <div className="d-flex align-items-center flex-column">
               <h1 className="text-danger text-center">QUẢN LÍ CÁC ĐƠN HÀNG</h1>
-              <div className="bg-white p-4 rounded shadow mt-4" style={{ width: "70%" }}>
+              <div className="bg-white p-4 rounded shadow mt-4 mb-5" style={{ width: "70%" }}>
                 <h3 className="text-center pb-4">Những đơn hàng chưa được giao thành công</h3>
                 <Table striped bordered hover>
                   <thead className='text-center'>
@@ -222,17 +221,17 @@ function Orders() {
 
   const ShowCustomer = () => {
     return (<>
-      <div className='row'>
-        {toggle && <div className='col-4 col-md-2 vh-100 position-fixed bg-white'>
+      <div className='row vh-100'>
+        {toggle && <div className='col-4 col-md-2  position-fixed bg-white'>
           <Sidebar />
         </div>}
         {toggle && <div className='col-4 col-md-2'></div>}
-        <div className='col vh-100' style={{ backgroundColor: "#E0EAFC" }}>
+        <div className='col' style={{ backgroundColor: "#E0EAFC" }}>
           <div className='px-3'>
             <Header Toggle={Toggle} />
             <div className="d-flex align-items-center flex-column" >
               <h1 className="text-danger text-center">QUẢN LÍ CÁC ĐƠN HÀNG</h1>
-              <div className="bg-white p-4 rounded shadow mt-4" style={{ width: "70%" }}>
+              <div className="bg-white p-4 rounded shadow mt-4 mb-5" style={{ width: "70%" }}>
                 <h3 className="text-center pb-4">Những đơn hàng của bạn</h3>
                 <Table striped bordered hover>
                   <thead className='text-center'>
@@ -280,17 +279,17 @@ function Orders() {
 
   const ShowAdmin = () => {
     return (<>
-      <div className='row'>
-        {toggle && <div className='col-4 col-md-2 vh-100 position-fixed bg-white'>
+      <div className='row vh-100'>
+        {toggle && <div className='col-4 col-md-2  position-fixed bg-white'>
           <Sidebar />
         </div>}
         {toggle && <div className='col-4 col-md-2'></div>}
-        <div className='col vh-100' style={{ backgroundColor: "#E0EAFC" }} >
+        <div className='col' style={{ backgroundColor: "#E0EAFC" }} >
           <div className='px-3'>
             <Header Toggle={Toggle} />
             <div className="d-flex align-items-center flex-column">
               <h1 className="text-info text-center">QUẢN TRỊ ĐƠN HÀNG</h1>
-              <div className="bg-white p-4 rounded shadow mt-4" style={{ width: "70%" }}>
+              <div className="bg-white p-4 rounded shadow mt-4 mb-5" style={{ width: "70%" }}>
                 <h3 className="text-center pb-4">Tất cả đơn hàng</h3>
                 <Table striped bordered hover>
                   <thead className='text-center'>
@@ -343,8 +342,7 @@ function Orders() {
   }
 
   return (
-    <div className='container-fluid bg-light min-vh-100'>
-
+    <div className='container-fluid bg-light max-vh-100'>
       {!loading && user.user_role === "SHIPPER_ROLE" ? <ShowShipper /> : !loading && user.user_role === "CUSTOMER_ROLE" ? <ShowCustomer /> : !loading && user.user_role === "ADMIN_ROLE" ? <ShowAdmin /> : <Loading />}
     </div>
   )

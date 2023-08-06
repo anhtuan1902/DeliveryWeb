@@ -38,7 +38,8 @@ function Home() {
 const ShowHome = () => {
   return (<>
     <div className='row vh-100'>
-      {toggle && <div className='col-4 col-md-2 position-fixed bg-white'>
+      {toggle && 
+      <div className='col-4 col-md-2 position-fixed bg-white'>
         <Sidebar />
       </div>}
       {toggle && <div className='col-4 col-md-2'></div>}
