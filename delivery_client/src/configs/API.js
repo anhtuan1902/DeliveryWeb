@@ -29,24 +29,24 @@ export const endpoints = {
 }
 
 // "http://anhtuan190201.pythonanywhere.com/"
-// export const authAPI = () => axios.create({
-//     baseURL: "http://127.0.0.1:8000/",
-//     headers: {
-//         "Authorization": `Bearer ${cookies.load("access-token")}`
-//     }
-// })
-
-// export default axios.create({
-//     baseURL: "http://127.0.0.1:8000/"
-// })
-
 export const authAPI = () => axios.create({
-    baseURL: "http://deliverydjango.pythonanywhere.com",
+    baseURL: "http://127.0.0.1:8000/",
     headers: {
         "Authorization": `Bearer ${cookies.load("access-token")}`
     }
 })
 
 export default axios.create({
-    baseURL: "http://deliverydjango.pythonanywhere.com/"
+    baseURL: "http://127.0.0.1:8000/"
 })
+
+// export const authAPI = () => axios.create({
+//     baseURL: "http://deliverydjango.pythonanywhere.com",
+//     headers: {
+//         "Authorization": `Bearer ${cookies.load("access-token")}`
+//     }
+// })
+
+// export default axios.create({
+//     baseURL: "http://deliverydjango.pythonanywhere.com/"
+// })
