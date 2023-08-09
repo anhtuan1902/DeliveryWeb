@@ -19,10 +19,25 @@ class UserSerializer(ModelSerializer):
         return user
 
 
-class ShipperSerializer(ModelSerializer):
+class ImageSerializer(ModelSerializer):
+    avatar = serializers.SerializerMethodField(source='avatar')
+
+    def get_avatar(self, obj):
+        if obj.avatar:
+            request = self.context.get('request')
+            return request.build_absolute_uri('/static/%s' % obj.avatar.name) if request else ''
+
+
+class ShipperSerializer(ImageSerializer):
+    def get_image(self, obj):
+        if obj.avatar:
+            request = self.context.get('request')
+            return request.build_absolute_uri('/static/%s' % obj.avatar.name) if request else ''
+
     class Meta:
         model = Shipper
         fields = ['id', 'avatar', 'CMND', 'already_verify', 'user']
+
         extra_kwargs = {
             'already_verify': {'write_only': 'true'}
         }
@@ -34,7 +49,7 @@ class ShipperSerializer(ModelSerializer):
         return shipper
 
 
-class AdminSerializer(ModelSerializer):
+class AdminSerializer(ImageSerializer):
 
     class Meta:
         model = Admin
@@ -47,7 +62,7 @@ class AdminSerializer(ModelSerializer):
         return admin
 
 
-class CustomerSerializer(ModelSerializer):
+class CustomerSerializer(ImageSerializer):
     class Meta:
         model = Customer
         fields = ['id', 'avatar', 'user']
@@ -73,6 +88,13 @@ class DiscountSerializer(ModelSerializer):
 
 
 class PostSerializer(ModelSerializer):
+    image = serializers.SerializerMethodField(source='product_img')
+
+    def get_image(self, obj):
+        if obj.product_img:
+            request = self.context.get('request')
+            return request.build_absolute_uri('/static/%s' % obj.product_img.name) if request else ''
+
     class Meta:
         model = Post
         fields = ['id', 'product_name', 'product_img', 'from_address', 'to_address', 'description',

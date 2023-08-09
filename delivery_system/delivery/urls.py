@@ -3,6 +3,7 @@ from . import views
 from rest_framework.routers import DefaultRouter
 
 
+
 router = DefaultRouter()
 
 router.register('posts', views.PostViewSet, 'post')
@@ -20,3 +21,4 @@ urlpatterns = [
     path('', include(router.urls)),
     path('oauth2-info/', views.AuthInfo.as_view())
 ]
+

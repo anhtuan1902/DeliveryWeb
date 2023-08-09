@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +25,7 @@ SECRET_KEY = 'django-insecure-(ju)l4sd(^+1tz7p(&sx*#tme=n73drkdr#1nru0cck&8129a3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tat2501.pythonanywhere.com']
 
 # Application definition
 
@@ -39,8 +40,6 @@ INSTALLED_APPS = [
     'drf_yasg',
     'oauth2_provider',
     'delivery.apps.DeliveryConfig',
-    "cloudinary",
-    "cloudinary_storage",
     'rest_framework',
     'corsheaders',
 ]
@@ -104,10 +103,10 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'deliverydb',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': ''  # mặc định localhost
+        'NAME': 'tat2501$deliverydb',
+        'USER': 'tat2501',
+        'PASSWORD': '123456aT@',
+        'HOST': 'tat2501.mysql.pythonanywhere-services.com'  # mặc định localhost
     }
 }
 
@@ -145,20 +144,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = '%s/delivery_system/static/' % BASE_DIR
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'tat1902',
-    'API_KEY': '176383379121422',
-    'API_SECRET': 'Kwqp-Zmp4qUgiQKZamVLArmsicc'
-}
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Jazzmin Setting
 JAZZMIN_SETTINGS = {
@@ -190,8 +186,8 @@ JAZZMIN_UI_TWEAKS = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 OAUTH2_INFO = {
-    'client_id': 'xjIkQ4rfoAkqC1AyFWDwNZRwFUf2YHjdtnOYRO4x',
-    'client_secret': 'itMyHUiZ7CBmw4RVsqUJORBkFlxZO5n5KJ8Khtkjn5aAckfOFobs0cy6p5zXsD3oIpzcklQDsxeRhrk7ZDQIEDt8jizPEf0qpP8j8Xmc1feigyUFUgmGE3jqQVcyyvy9',
+    'client_id': '9vhHlCjWFLyjziLLorgcD2c0JHVsi4l9Tttngjph',
+    'client_secret': 'KXW7Jesp2Lm4xo7OYMKWmLyHqK5lT4gCmx3fnMdJIfW1E4w1usCFpaJumKjahF8mwxCCUlAICp2Pgb1vdhZEA15NgYeblaIQURIdhJM1CXtzE4b7BjrOBjl1MhO9OvwK',
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

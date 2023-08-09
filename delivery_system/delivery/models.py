@@ -20,7 +20,7 @@ class User(AbstractUser):
 
 class Admin(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.FileField(upload_to='delivery-system-image')
+    avatar = models.ImageField(upload_to="img/user/admin/%Y/%m")
 
     class Meta:
         unique_together = ('id', 'user')
@@ -31,7 +31,7 @@ class Admin(models.Model):
 
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.FileField(upload_to='delivery-system-image')
+    avatar = models.ImageField(upload_to="img/user/customer/%Y/%m")
 
     class Meta:
         unique_together = ('id', 'user')
@@ -42,7 +42,7 @@ class Customer(models.Model):
 
 class Shipper(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.FileField(upload_to='delivery-system-image')
+    avatar = models.ImageField(upload_to="img/user/shipper/%Y/%m")
     CMND = models.CharField(max_length=50, null=False, unique=True)
     already_verify = models.BooleanField(default=False)
 
@@ -89,7 +89,7 @@ class Order(BaseModel):
 
 class Post(BaseModel):
     product_name = models.CharField(max_length=100, null=False)
-    product_img = models.FileField(upload_to='delivery-system-image', null=False)
+    product_img = models.ImageField(upload_to="img/post/%Y/%m")
     from_address = models.CharField(max_length=150, null=False)
     to_address = models.CharField(max_length=150, null=False)
     description = models.CharField(max_length=255, null=True)
